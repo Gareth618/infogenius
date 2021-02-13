@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.618;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+}
+
+@media (max-width: 760px) {
+  .medium-screen {
+    display: none;
+  }
+  .big-screen {
+    display: none;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1200px) {
+  .small-screen {
+    display: none;
+  }
+  .big-screen {
+    display: none;
+  }
+}
+
+@media (min-width: 1201px) {
+  .small-screen {
+    display: none;
+  }
+  .medium-screen {
+    display: none;
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  animation: gradient 10s ease infinite;
+  background-size: 400% 400%;
+}
+
+@media (max-width: 1000px) {
+  body {
+    background: linear-gradient(45deg, #0062ff, #a3c6ff);
+  }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0 50%;
+	}
+}
+
+.main-container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1800px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 90%;
+  max-width: 1800px;
+}
+
+nav {
+  display: flex;
+  padding: 20px 5%;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+
+header nav {
+  height: 80px;
+  background-color: #181818;
+}
+
+.logo {
+  height: 100%;
+  margin-right: 5%;
+}
+
+.logo img {
+  height: 100%;
+  transition: .3s;
+}
+
+.logo img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+nav ul {
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin: .5rem;
+}
+
+header nav li:last-child {
+  margin-right: 0;
+}
+
+.categories a {
+  display: inline-block;
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: .3s;
+}
+
+.small-screen a {
+  font-size: 1.5rem;
+}
+
+.categories a:hover {
+  color: lightskyblue;
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+section {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+.article-list {
+  width: calc(85% - 200px);
+  margin: 5% 0 5% 5%;
+}
+
+.side-bar {
+  width: 200px;
+  margin: 5%;
+  min-height: 100px;
+  background-color: bisque;
+  border-radius: .4rem;
+}
+
+@media (max-width: 1000px) {
+  .article-list {
+    width: 100%;
+    margin: 5%;
+  }
+  .side-bar {
+    margin-top: 0;
+    width: 100%;
+  }
+}
+
+article {
+  margin-bottom: 5%;
+}
+
+article:last-child {
+  margin-bottom: 0;
+}
+
+article:last-child p {
+  margin-bottom: 0;
+}
+
+article img {
+  width: 100%;
+  border-radius: .4rem;
+}
+
+article h2 {
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  font-size: 30px;
+  color: #333;
+}
+
+.article-meta {
+  font-size: 17px;
+  color: #333;
+}
+
+article p {
+  margin-top: 1rem;
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  color: #555;
+}
+
+@media (min-width: 760px) {
+  article p {
+    text-align: justify;
+  }
+}
+
+footer nav {
+  min-height: 60px;
+  background-color: #282828;
+}
+
+footer nav a {
+  display: inline-block;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: .3s;
+}
+
+footer nav a:hover {
+  color: #fff;
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+footer nav li:first-child {
+  margin-left: 0;
+}
+
+@media (max-width: 500px) {
+  header li {
+    margin-left: 0;
+  }
+  footer li {
+    margin-left: 0;
+  }
+}
+
+.footer-info {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #181818;
+  padding: 0 5%;
+  align-items: center;
+  font-size: 20px;
+  color: #777;
+}
+
+.fb {
+  height: 60%;
+}
+
+.fb img {
+  height: 100%;
+  filter: brightness(.75);
+}
+
+.fb img:hover {
+  cursor: pointer;
+  filter: brightness(1);
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+@media (max-width: 760px) {
+  header {
+    width: 100%;
+  }
+  .main-container {
+    width: 100%;
+  }
+}
