@@ -21,7 +21,7 @@ h6 {
   line-height: 1.2;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   .medium-screen {
     display: none;
   }
@@ -30,7 +30,7 @@ h6 {
   }
 }
 
-@media (min-width: 761px) and (max-width: 1200px) {
+@media (min-width: 801px) and (max-width: 1250px) {
   .small-screen {
     display: none;
   }
@@ -39,7 +39,7 @@ h6 {
   }
 }
 
-@media (min-width: 1201px) {
+@media (min-width: 1251px) {
   .small-screen {
     display: none;
   }
@@ -47,31 +47,13 @@ h6 {
     display: none;
   }
 }
+
+/* ======= BODY ======= */
 
 body {
   padding: 0;
   margin: 0;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  animation: gradient 10s ease infinite;
-  background-size: 400% 400%;
-}
-
-@media (max-width: 1000px) {
-  body {
-    background: linear-gradient(45deg, #0062ff, #a3c6ff);
-  }
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0 50%;
-	}
+  background: linear-gradient(45deg, dodgerblue, cornflowerblue);
 }
 
 .main-container {
@@ -81,12 +63,7 @@ body {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
 }
 
-header {
-  position: fixed;
-  top: 0;
-  width: 90%;
-  max-width: 1800px;
-}
+/* ======= GENERAL NAV ======= */
 
 nav {
   display: flex;
@@ -96,6 +73,37 @@ nav {
   justify-items: center;
   align-items: center;
   align-content: center;
+}
+
+nav ul {
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  height: 100%;
+  display: inline;
+  margin-right: 1rem;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 800px) {
+  nav li {
+    margin-right: .3rem;
+  }
+}
+
+/* ======= TOP NAV ======= */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 90%;
+  max-width: 1800px;
 }
 
 header nav {
@@ -110,28 +118,22 @@ header nav {
 
 .logo img {
   height: 100%;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo span {
+  color: aliceblue;
+  margin-left: .3rem;
+  font-size: 0;
   transition: .3s;
 }
 
-.logo img:hover {
-  cursor: pointer;
-  transform: scale(1.1);
+.logo:hover span {
+  font-size: inherit;
   transition: .3s;
-}
-
-nav ul {
-  width: fit-content;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  display: inline;
-  margin: .5rem;
-}
-
-header nav li:last-child {
-  margin-right: 0;
 }
 
 .categories a {
@@ -142,15 +144,21 @@ header nav li:last-child {
   transition: .3s;
 }
 
-.small-screen a {
-  font-size: 1.5rem;
+@media (max-width: 800px) {
+  .categories a {
+    font-size: 1.5rem;
+  }
+  .categories a:hover {
+    transform: scale(1.5);
+  }
 }
 
 .categories a:hover {
   color: lightskyblue;
-  transform: scale(1.1);
   transition: .3s;
 }
+
+/* ======= ARTICLE LIST ======= */
 
 section {
   margin-top: 80px;
@@ -217,14 +225,16 @@ article p {
   margin-top: 1rem;
   font-family: 'Merriweather', serif;
   font-size: 16px;
-  color: #555;
+  color: #444;
 }
 
-@media (min-width: 760px) {
+@media (min-width: 801px) {
   article p {
     text-align: justify;
   }
 }
+
+/* ======= BOTTOM NAV ======= */
 
 footer nav {
   min-height: 60px;
@@ -241,21 +251,7 @@ footer nav a {
 
 footer nav a:hover {
   color: #fff;
-  transform: scale(1.1);
   transition: .3s;
-}
-
-footer nav li:first-child {
-  margin-left: 0;
-}
-
-@media (max-width: 500px) {
-  header li {
-    margin-left: 0;
-  }
-  footer li {
-    margin-left: 0;
-  }
 }
 
 .footer-info {
@@ -277,16 +273,16 @@ footer nav li:first-child {
 .fb img {
   height: 100%;
   filter: brightness(.75);
+  transition: .3s;
 }
 
 .fb img:hover {
-  cursor: pointer;
   filter: brightness(1);
   transform: scale(1.1);
   transition: .3s;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   header {
     width: 100%;
   }
