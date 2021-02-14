@@ -13,5 +13,5 @@ Am creat acest repo ca să învăț web-dev și să-mi rescriu site-ul de la zer
 - [ ] add back to top button
 - [ ] add cookies notice
 - [ ] add dropdown menu for mobile
-- [ ] decrease top navbar when scrolling
+- [ ] decrease top navbar height when scrolling
 - [ ] add search menu
