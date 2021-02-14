@@ -7,7 +7,7 @@ Am creat acest repo ca să învăț web-dev și să-mi rescriu site-ul de la zer
 **PS:** Foarte fain git-ul ăsta.
 
 ## TODO (`index.html`)
-- [ ] add pagination
+- [x] add pagination
 - [ ] add sidebar AdSense (vertical + horizontal)
 - [ ] add news card sidebar
 - [ ] add back to top button
