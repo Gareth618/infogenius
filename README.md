@@ -9,7 +9,6 @@ Am creat acest repo ca să învăț web-dev și să-mi rescriu site-ul de la zer
 ## TODO (`index.html`)
 - [x] add pagination
 - [ ] add sidebar AdSense (vertical + horizontal)
-- [ ] add news card sidebar
 - [ ] add back to top button
 - [ ] add cookies notice
 - [ ] add dropdown menu for mobile
