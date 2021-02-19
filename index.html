@@ -29,7 +29,14 @@
               <li><a href="https://infogenius.ro/category/limbajul-cpp/">👨‍💻</a></li>
               <li><a href="https://infogenius.ro/category/admitere-iasi/">🎓</a></li>
               <li><a href="https://infogenius.ro/category/diverse/">🎈</a></li>
-              <li><a href="#!">🔍</a></li>
+              <li>
+                <a href="#!">
+                  <svg fill='none' stroke='#f0f8ff' stroke-width='8' stroke-dashoffset='0' stroke-dasharray='0' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+                    <circle cx="60" cy="40" r="30"></circle>
+                    <line x1="10" y1="90" x2="38" y2="62"></line>
+                  </svg>
+                </a>
+              </li>
             </ul>
             <ul class="medium-screen">
               <li><a href="https://infogenius.ro/category/algoritmica-structuri-de-date/">Algoritmică</a></li>
@@ -37,7 +44,14 @@
               <li><a href="https://infogenius.ro/category/limbajul-cpp/">C++</a></li>
               <li><a href="https://infogenius.ro/category/admitere-iasi/">Admitere</a></li>
               <li><a href="https://infogenius.ro/category/diverse/">Diverse</a></li>
-              <li><a href="#!">🔍</a></li>
+              <li>
+                <a href="#!">
+                  <svg style="width: 1rem" fill='none' stroke='#f0f8ff' stroke-width='8' stroke-dashoffset='0' stroke-dasharray='0' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+                    <circle cx="60" cy="40" r="30"></circle>
+                    <line x1="10" y1="90" x2="38" y2="62"></line>
+                  </svg>
+                </a>
+              </li>
             </ul>
             <ul class="big-screen">
               <li><a href="https://infogenius.ro/category/algoritmica-structuri-de-date/">Algoritmică și structuri de date</a></li>
@@ -45,7 +59,14 @@
               <li><a href="https://infogenius.ro/category/limbajul-cpp/">Limbajul C++</a></li>
               <li><a href="https://infogenius.ro/category/admitere-iasi/">Admitere Iași</a></li>
               <li><a href="https://infogenius.ro/category/diverse/">Diverse</a></li>
-              <li><a href="#!">🔍</a></li>
+              <li>
+                <a href="#!">
+                  <svg fill='none' stroke='#f0f8ff' stroke-width='8' stroke-dashoffset='0' stroke-dasharray='0' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+                    <circle cx="60" cy="40" r="30"></circle>
+                    <line x1="10" y1="90" x2="38" y2="62"></line>
+                  </svg>
+                </a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -113,30 +134,14 @@
             <div class="article-meta">de Iulian Oleniuc | 13/09/2020 | <a href="https://infogenius.ro/category/algoritmica-structuri-de-date/">Algoritmică și structuri de date</a>, <a href="https://infogenius.ro/category/algoritmica-structuri-de-date/matematica/">Matematică</a></div>
             <p>În acest articol voi prezenta conceptele de CMMDC (cel mai mare divizor comun) și CMMMC (cel mai mic multiplu comun), precum și Algoritmul lui Euclid, atât prin scăderi repetate, cât și prin împărțiri repetate. La final, vom discuta despre câteva aplicații la CMMDC și...</p>
           </article>
-          <div class="pagination">
-            <span>
-              <a href="https://infogenius.ro/page/3/">≪</a>
-            </span>
-            <span>
-              <a href="https://infogenius.ro/page/1/">1</a>
-            </span>
-            <span class="separator">⋯</span>
-            <span>
-              <a href="https://infogenius.ro/page/3/">3</a>
-            </span>
-            <span class="active">
-              <a href="index.html">4</a>
-            </span>
-            <span>
-              <a href="https://infogenius.ro/page/5/">5</a>
-            </span>
-            <span class="separator">⋯</span>
-            <span>
-              <a href="https://infogenius.ro/page/7/">7</a>
-            </span>
-            <span>
-              <a href="https://infogenius.ro/page/5/">≫</a>
-            </span>
+
+          <div class="pagination small-screen">
+            <a href="https://infogenius.ro/page/3/">≪ Older</a>
+            <a href="https://infogenius.ro/page/1/">Newer ≫</a>
+          </div>
+          <div class="pagination big-screen">
+            <a href="https://infogenius.ro/page/3/">≪ Articole mai vechi</a>
+            <a href="https://infogenius.ro/page/1/">Articole mai noi ≫</a>
           </div>
         </div>
 
@@ -168,20 +173,44 @@
             </li>
           </ul>
         </div>
+        <button type="button" id="back-to-top">☝️</button>
+
+        <div id="cookie-notice">
+          <h2>Notificare cookie-uri</h2>
+          <p>
+            Acest website folosește cookie-uri pentru a îmbunătăți experiența utilizatorului.
+            Navigând în continuare, vă exprimați acordul asupra folosirii cookie-urilor.
+          </p>
+          <button type="button" onclick="acceptCookies()">De acord!</button>
+        </div>
       </footer>
     </div>
 
     <script>
-      window.onscroll = function() {
+      window.onscroll = () => {
         if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
           document.getElementById("navbar").style.height = "60px";
           document.getElementById("navbar").style.padding = "15px 5%";
+          document.getElementById("back-to-top").style.right = "0";
         }
         else {
           document.getElementById("navbar").style.height = "80px";
           document.getElementById("navbar").style.padding = "20px 5%";
+          document.getElementById("back-to-top").style.right = "-3.5%";
         }
       };
+
+      document.getElementById("back-to-top").addEventListener("click", () => {
+        document.documentElement.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+
+      function acceptCookies() {
+        document.getElementById("cookie-notice").style.display = "none";
+        // TODO
+      }
     </script>
   </body>
 </html>

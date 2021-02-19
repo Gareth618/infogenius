@@ -8,8 +8,9 @@ Am creat acest repo ca să învăț web-dev și să-mi rescriu site-ul de la zer
 
 ## TODO (`index.html`)
 - [x] add pagination
-- [ ] add responsive pagination
-- [ ] add cookies notice
-- [ ] add dropdown menu for mobile
+- [x] add cookie notice
 - [x] decrease top navbar height when scrolling
+- [x] add back to top button
+- [ ] add dark mode
+- [ ] add dropdown menu for mobile
 - [ ] add search menu

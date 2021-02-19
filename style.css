@@ -32,6 +32,15 @@ a:hover {
   transition: color .3s;
 }
 
+svg {
+  height: 1rem;
+  vertical-align: middle;
+}
+
+button {
+  outline: none;
+}
+
 @media (max-width: 800px) {
   .medium-screen {
     display: none;
@@ -165,6 +174,9 @@ header ul {
     transform: scale(1.5);
     transition: transform .3s;
   }
+  svg {
+    height: 1.5rem;
+  }
 }
 
 .categories a:hover {
@@ -258,39 +270,35 @@ article p {
 /* ======= PAGINATION ======= */
 
 .pagination {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
   font-size: 1rem;
   color: aliceblue;
   cursor: default;
 }
 
-.pagination span {
-  display: inline-block;
-  margin: .2rem .1rem;
+.pagination a {
+  padding: .5rem 1rem;
+  background-color: cornflowerblue;
   border-radius: .4rem;
-  background-color: cornflowerblue;
+  transition: background-color .3s;
 }
 
-.pagination span:hover {
+.pagination a:hover {
   background-color: dodgerblue;
+  transition: background-color .3s;
 }
 
-.pagination span.active {
-  color: white;
-  background-color: royalblue;
+@media (max-width: 400px) {
+  .pagination.big-screen {
+    display: none;
+  }
 }
 
-.pagination span a {
-  display: inline-block;
-  padding: .3rem .75rem;
-}
-
-.pagination span.separator {
-  padding: .3rem .75rem;
-}
-
-.pagination span.separator:hover {
-  background-color: cornflowerblue;
+@media (min-width: 401px) {
+  .pagination.small-screen {
+    display: none;
+  }
 }
 
 /* ======= BOTTOM NAV ======= */
@@ -380,4 +388,84 @@ footer nav a:hover {
 
 #github:hover {
   filter: invert(1) brightness(1);
+}
+
+/* ======= BACK TO TOP BUTTON ======= */
+
+#back-to-top {
+  position: fixed;
+  right: -3.5%;
+  bottom: 70px;
+  width: 3.5%;
+  height: 40px;
+  border: none;
+  border-radius: .4rem 0 0 .4rem;
+  background-color: #333;
+  font-size: 1.25rem;
+  transition: right .3s;
+}
+
+#back-to-top:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  #back-to-top {
+    display: none;
+  }
+}
+
+/* ======= COOKIE NOTICE ======= */
+
+#cookie-notice {
+  position: fixed;
+  left: 2rem;
+  bottom: 2rem;
+  width: 400px;
+  background: linear-gradient(45deg, #222, #444);
+  border-radius: .4rem;
+  padding: 1rem;
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+}
+
+#cookie-notice h2 {
+  margin: 0;
+  color: white;
+}
+
+#cookie-notice p {
+  color: aliceblue;
+}
+
+#cookie-notice button {
+  float: right;
+  border: none;
+  border-radius: .4rem;
+  background-color: white;
+  color: #282828;
+  font-size: 1rem;
+  padding: .25rem .75rem;
+  transition: .3s;
+  transition-property: background-color, color;
+}
+
+#cookie-notice button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: cornflowerblue;
+  transition: .3s;
+  transition-property: background-color, color;
+}
+
+@media (max-width: 800px) {
+  #cookie-notice {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-radius: 0;
+    text-align: center;
+  }
+  #cookie-notice button {
+    float: none;
+  }
 }
