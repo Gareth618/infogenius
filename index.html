@@ -15,7 +15,7 @@
   <body>
     <div class="main-container">
       <header>
-        <nav>
+        <nav id="navbar">
           <div class="logo">
             <a href="index.html">
               <img src="logo.svg" alt="logo">
@@ -115,23 +115,27 @@
           </article>
           <div class="pagination">
             <span>
-              <a href="https://infogenius.ro/page/1/">≪</a>
+              <a href="https://infogenius.ro/page/3/">≪</a>
             </span>
             <span>
               <a href="https://infogenius.ro/page/1/">1</a>
             </span>
-            <span class="active">
-              <a href="index.html">2</a>
-            </span>
+            <span class="separator">⋯</span>
             <span>
               <a href="https://infogenius.ro/page/3/">3</a>
             </span>
-            <span class="separator">…</span>
-            <span>
-              <a href="https://infogenius.ro/page/6/">6</a>
+            <span class="active">
+              <a href="index.html">4</a>
             </span>
             <span>
-              <a href="https://infogenius.ro/page/3/">≫</a>
+              <a href="https://infogenius.ro/page/5/">5</a>
+            </span>
+            <span class="separator">⋯</span>
+            <span>
+              <a href="https://infogenius.ro/page/7/">7</a>
+            </span>
+            <span>
+              <a href="https://infogenius.ro/page/5/">≫</a>
             </span>
           </div>
         </div>
@@ -166,5 +170,18 @@
         </div>
       </footer>
     </div>
+
+    <script>
+      window.onscroll = function() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+          document.getElementById("navbar").style.height = "60px";
+          document.getElementById("navbar").style.padding = "15px 5%";
+        }
+        else {
+          document.getElementById("navbar").style.height = "80px";
+          document.getElementById("navbar").style.padding = "20px 5%";
+        }
+      };
+    </script>
   </body>
 </html>
