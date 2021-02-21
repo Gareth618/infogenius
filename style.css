@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400&display=swap');
 
+:root {
+  --bg-color: white;
+  --sidebar-color: bisque;
+  --title-color: #333;
+  --excerpt-color: #444;
+  --hover-color: dodgerblue;
+}
+
 * {
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
@@ -186,24 +194,27 @@ header ul {
 /* ======= ARTICLE LIST ======= */
 
 section {
-  margin-top: 80px;
+  padding-top: 80px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  background-color: white;
+  background-color: var(--bg-color);
+  transition: background-color .3s;
 }
 
 .article-list {
   width: calc(85% - 200px);
   margin: 5% 0 5% 5%;
+  transition: color .3s;
 }
 
 .sidebar {
   width: 200px;
   margin: 5%;
   min-height: 100px;
-  background-color: bisque;
+  background-color: var(--sidebar-color);
   border-radius: .4rem;
+  transition: background-color .3s;
 }
 
 @media (max-width: 1000px) {
@@ -229,27 +240,27 @@ article h2 {
   margin-top: 1rem;
   margin-bottom: .5rem;
   font-size: 30px;
-  color: #333;
+  color: var(--title-color);
 }
 
 article h2 a:hover {
-  color: dodgerblue;
+  color: var(--hover-color);
 }
 
 .article-meta {
   font-size: 17px;
-  color: #333;
+  color: var(--title-color);
 }
 
 .article-meta a:hover {
-  color: dodgerblue;
+  color: var(--hover-color);
 }
 
 article p {
   margin-top: 1rem;
   font-family: 'Merriweather', serif;
   font-size: 16px;
-  color: #444;
+  color: var(--excerpt-color);
 }
 
 @media (min-width: 801px) {
@@ -415,6 +426,31 @@ footer nav a:hover {
   }
 }
 
+/* ======= THEME BUTTON ======= */
+
+#theme {
+  position: fixed;
+  right: 0;
+  bottom: 10px;
+  width: 3.5%;
+  height: 40px;
+  border: none;
+  border-radius: .4rem 0 0 .4rem;
+  background-color: #333;
+  font-size: 1.25rem;
+  transition: right .3s;
+}
+
+#theme:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  #theme {
+    display: none;
+  }
+}
+
 /* ======= COOKIE NOTICE ======= */
 
 #cookie-notice {
@@ -422,7 +458,7 @@ footer nav a:hover {
   left: 2rem;
   bottom: 2rem;
   width: 400px;
-  background: linear-gradient(45deg, #222, #444);
+  background: linear-gradient(45deg, indigo, dodgerblue);
   border-radius: .4rem;
   padding: 1rem;
   box-shadow: 0 10px 16px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
