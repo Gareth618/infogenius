@@ -434,15 +434,7 @@ footer nav a:hover {
 
 .footer-info img:hover {
   filter: brightness(1);
-  transition: filter .3s;
-}
-
-#github {
-  filter: invert(1) brightness(.75);
-}
-
-#github:hover {
-  filter: invert(1) brightness(1);
+  /* transition: filter .3s; */
 }
 
 /* ======= BUTTONS ======= */
