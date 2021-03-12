@@ -13,7 +13,7 @@
     <title>InfoGenius – Blog despre informatică și programare</title>
   </head>
 
-  <body>
+  <body class="preload">
     <div class="main-container">
       <div id="dropdown-menu">
         <ul>
@@ -34,6 +34,7 @@
             <span>v2.0</span>
           </div>
           <div class="categories">
+            <input id="big-search-input">
             <ul class="small-screen">
               <li type="button" id="theme-top" onclick="changeTheme()">☀️</li>
               <li>
@@ -47,28 +48,16 @@
                 <div id="bar3"></div>
               </li>
             </ul>
-            <ul class="medium-screen">
-              <li><a href="https://infogenius.ro/category/algoritmica-structuri-de-date/">Algoritmică</a></li>
-              <li><a href="https://infogenius.ro/category/probleme-olimpiada/">Olimpiadă</a></li>
-              <li><a href="https://infogenius.ro/category/limbajul-cpp/">C++</a></li>
-              <li><a href="https://infogenius.ro/category/admitere-iasi/">Admitere</a></li>
-              <li><a href="https://infogenius.ro/category/diverse/">Diverse</a></li>
+            <ul class="medium-and-big-screen">
+              <li><a id="1" href="https://infogenius.ro/category/algoritmica-structuri-de-date/">Algoritmică și structuri de date</a></li>
+              <li><a id="2" href="https://infogenius.ro/category/probleme-olimpiada/">Probleme de olimpiadă</a></li>
+              <li><a id="3" href="https://infogenius.ro/category/limbajul-cpp/">Limbajul C++</a></li>
+              <li><a id="4" href="https://infogenius.ro/category/admitere-iasi/">Admitere Iași</a></li>
+              <li><a id="5" href="https://infogenius.ro/category/diverse/">Diverse</a></li>
               <li>
-                <a href="#!">
+                <button id="big-search" type="button" onclick="bigSearch()">
                   <img src="search.svg" alt="Search" class="search">
-                </a>
-              </li>
-            </ul>
-            <ul class="big-screen">
-              <li><a href="https://infogenius.ro/category/algoritmica-structuri-de-date/">Algoritmică și structuri de date</a></li>
-              <li><a href="https://infogenius.ro/category/probleme-olimpiada/">Probleme de olimpiadă</a></li>
-              <li><a href="https://infogenius.ro/category/limbajul-cpp/">Limbajul C++</a></li>
-              <li><a href="https://infogenius.ro/category/admitere-iasi/">Admitere Iași</a></li>
-              <li><a href="https://infogenius.ro/category/diverse/">Diverse</a></li>
-              <li>
-                <a href="#!">
-                  <img src="search.svg" alt="Search" class="search">
-                </a>
+                </button>
               </li>
             </ul>
           </div>

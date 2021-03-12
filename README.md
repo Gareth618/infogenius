@@ -13,4 +13,5 @@ Am creat acest repo ca să învăț web-dev și să-mi rescriu site-ul de la zer
 - [x] add back to top button
 - [x] add dark mode
 - [x] add dropdown menu for mobile
-- [ ] add search menu
+- [x] add search menu
+- [x] refactor EVERYTHING

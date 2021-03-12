@@ -76,3 +76,24 @@ function updateDropdownMenu() {
   document.getElementById("dropdown-menu").style.top = "calc(" + topPX + "px - " + topREM + "rem)";
   document.getElementById("dropdown-menu").style.boxShadow = ["none", "0 0 10px 0 rgba(0, 0, 0, .3)"][droppedDown];
 }
+
+window.onresize = () => {
+  const ind = (window.innerWidth <= 1250 ? 0 : 1);
+  document.getElementById("1").innerText = ["Algoritmică", "Algoritmică și structuri de date"][ind];
+  document.getElementById("2").innerText = ["Olimpiadă", "Probleme de olimpiadă"][ind];
+  document.getElementById("3").innerText = ["C++", "Limbajul C++"][ind];
+  document.getElementById("4").innerText = ["Admitere", "Admitere Iași"][ind];
+  document.getElementById("5").innerText = ["Diverse", "Diverse"][ind];
+};
+
+window.onload = () => {
+  setTimeout(() => {
+    document.body.classList.toggle("preload");
+  }, 314);
+  window.onresize();
+}
+
+let searching = 0;
+function search() {
+  searching ^= 1;
+}

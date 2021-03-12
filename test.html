@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div style="width: fit-content">
+    <input id="inpt" style="display: block; width: 100%; height: 0; background-color: red; margin: 0; padding: 0; border-width: 0; opacity: 0; transition: height 1s, opacity 1s">
+    <ul id="list" style="display: block; width: fit-content; height: 20px; background-color: cornflowerblue; margin: 0; opacity: 1; transition: height 1s, opacity 1s">
+      <li style="display: inline">1</li>
+      <li style="display: inline">2</li>
+      <li style="display: inline">3</li>
+      <li style="display: inline">4</li>
+      <li style="display: inline">5</li>
+      <li style="display: inline">6</li>
+      <li style="display: inline">7</li>
+      <li style="display: inline">8</li>
+      <li style="display: inline">9</li>
+      <li style="display: inline">0</li>
+      <li style="display: inline">1</li>
+      <li style="display: inline">2</li>
+      <li style="display: inline">3</li>
+      <li style="display: inline">4</li>
+      <li style="display: inline">5</li>
+      <li style="display: inline">6</li>
+      <li style="display: inline">7</li>
+      <li style="display: inline">8</li>
+      <li style="display: inline">9</li>
+      <li style="display: inline">0</li>
+    </ul>
+  </div>
+
+  <script>
+    function f1() {
+      setTimeout(() => {
+        document.getElementById("inpt").focus();
+      }, 1000);
+      document.getElementById("inpt").style.height = "20px";
+      document.getElementById("list").style.height = "0";
+      document.getElementById("inpt").style.opacity = "1";
+      document.getElementById("list").style.opacity = "0";
+    }
+
+    function f2() {
+      setTimeout(() => {
+        document.getElementById("inpt").blur();
+      }, 1000);
+      document.getElementById("inpt").style.height = "0";
+      document.getElementById("list").style.height = "20px";
+      document.getElementById("inpt").style.opacity = "0";
+      document.getElementById("list").style.opacity = "1";
+    }
+
+    window.onload = () => {
+      setTimeout(f1, 5000);
+      setTimeout(f2, 10000);
+      setTimeout(f1, 15000);
+      setTimeout(f2, 20000);
+    }
+  </script>
+
+  <style>
+    #inpt:focus {
+      outline: none;
+    }
+  </style>
+</body>
+</html>
